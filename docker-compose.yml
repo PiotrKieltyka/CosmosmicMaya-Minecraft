@@ -1,0 +1,18 @@
+version: "3.7"
+services:
+  cosmosmicmaya:
+    ports:
+      - target: 19132
+        published: 19132
+        protocol: udp
+        mode: host
+    image: itzg/minecraft-bedrock-server
+    environment:
+      SERVER_NAME: "§r§o§l§2Cosmosmic§n§6Maya:§r§cMinecraft§r§bServer"
+      EULA: "true"
+      GAMEMODE: survival
+      DIFFICULTY: normal
+      MAX_PLAYERS: 100
+    tty: true
+    stdin_open: true
+    restart: always
